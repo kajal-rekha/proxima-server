@@ -130,7 +130,11 @@ const updateProject = async (req, res) => {
     return res.status(404).json({ error: "Invalid id" });
   }
 
-  const project = await Project.findOneAndUpdate({ _id: id }, { ...req.body });
+  const project = await Project.findOneAndUpdate(
+    { _id: id },
+    { ...req.body },
+    { new: true }
+  );
 
   if (!project) {
     return res.status(400).json({ error: "No project found" });
