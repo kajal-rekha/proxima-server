@@ -14,6 +14,8 @@ const router = express.Router();
 
 router.use(requireAuth);
 
+router.use(requireAuth);
+
 // GET all projects
 router.get("/", getAllProjects);
 
