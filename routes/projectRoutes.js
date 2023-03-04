@@ -14,19 +14,19 @@ const router = express.Router();
 
 router.use(requireAuth);
 
-// GET all projects
+// get all projects
 router.get("/", getAllProjects);
 
-// GET a single project
+// get a single project
 router.get("/:id", getSingleProject);
 
-// POST  a new project
+// post  a new project
 router.post("/", postProject);
 
-// DELETE a  project
+// delete a  project
 router.delete("/:id", deleteProject);
 
-// UPDATE a project
+// update a project
 router.patch("/:id", updateProject);
 
 module.exports = router;

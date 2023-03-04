@@ -28,7 +28,6 @@ userSchema.statics.signup = async function (email, password) {
   }
 
   // lowercase, uppercase, number, symbol, 8+ chars
-
   if (!validator.isStrongPassword(password)) {
     throw Error(
       "Uh-oh! Looks like your password needs a power-up. Add uppercase, lowercase, numbers, and symbols and minimum of 8 chars to make it super strong!"
